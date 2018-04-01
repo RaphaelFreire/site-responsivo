@@ -14,13 +14,21 @@ section.sobre
 		
 		//Adicionand margin para separar as linhas do layout
 		margin: 50px 0
+
+		//Para no respondivo os elementos ficarem alinhado ao content: ''
+		text-align: center
 		
 		//Ajustando as column do grid
 		+make-sm-column(10)
 		+make-sm-column-offset(1)
 
+		+breakpoint($tablet)
+			display: block
+
 		.foto
 			+order(3)
+			+breakpoint($tablet)
+				margin: 0 0 30px
 
 
 		//Para pegar tudo que esta dentro de itens com a chamada inicial antes do hifen com icone 
@@ -34,6 +42,14 @@ section.sobre
 			line-height: 85px
 			color: $branco
 			+font-size(55px)
+
+			+breakpoint($tablet)
+				display: inline-block
+				width: 55px
+				height: 55px
+				line-height: 53px
+				+font-size(40px)
+				margin: 0 3px
 
 			//organizando ordem dos elementos
 			&.icone-lapis
@@ -49,3 +65,10 @@ section.sobre
 		+make-sm-column(8)
 		+make-sm-column-offset(2)
 		text-align: center
+
+		p 
+			+font-size(25px)
+
+	.botao
+		display: table
+		margin: 30px auto
