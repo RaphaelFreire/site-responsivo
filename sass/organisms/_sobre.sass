@@ -1,0 +1,51 @@
+/* Não esquecer de colocar a chamada do home.css no index */
+
+section.sobre
+	.itens
+
+		//Inserindo o propriedade flex
+		+flexbox
+
+		//alinhando pelo centro 
+		+align-items(center)
+
+		//justificando conteudo tendo como base container	
+		+justify-content(space-around)
+		
+		//Adicionand margin para separar as linhas do layout
+		margin: 50px 0
+		
+		//Ajustando as column do grid
+		+make-sm-column(10)
+		+make-sm-column-offset(1)
+
+		.foto
+			+order(3)
+
+
+		//Para pegar tudo que esta dentro de itens com a chamada inicial antes do hifen com icone 
+		[class^="icone-"]
+			//propriedade para estilizar os icones
+			width: 90px
+			height: 90px
+			background-color: $azul-claro
+			+border-radius(120px)
+			text-align: center
+			line-height: 85px
+			color: $branco
+			+font-size(55px)
+
+			//organizando ordem dos elementos
+			&.icone-lapis
+				+order(1)
+			&.icone-codigo
+				+order(2)
+			&.icone-coracao
+				+order(4)
+			&.icone-compartilhar
+				+order(5)
+
+	.textos
+		+make-sm-column(8)
+		+make-sm-column-offset(2)
+		text-align: center
