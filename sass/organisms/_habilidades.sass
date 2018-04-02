@@ -1,4 +1,5 @@
 .habilidades
+
 	+clearfix
 	+make-sm-column(10)
 	+make-sm-column-offset(1)
@@ -18,6 +19,13 @@
 					color: $azul
 				&.fa-wordpress
 					color: #1a98e8
+
+	
+	@for $i from 0 through 10
+		li.habilidade-#{$i}
+			.barra span
+				width: 10% * $i
+
 	.barra
 		background-color: $cinza-claro
 		+border-radius(120px)
@@ -25,5 +33,12 @@
 		width: 100%
 		height: 17px
 		margin: 10px 0
+		
+		span
+			display: block
+			height: 100%
+			+border-radius(120px)
+			+gradient(90deg, $azul, $verde)
+
 
 				
