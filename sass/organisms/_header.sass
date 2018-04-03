@@ -2,7 +2,8 @@ header
 	+clearfix
 	min-height: 475px
 	position: relative
-
+	
+	// Faixa degrade apos header
 	&:after
 		content: ""
 		display: block
@@ -34,30 +35,27 @@ header
 
 			+breakpoint($celular)	
 				display: none
-			ul
-				li
-					display: inline-block
-					margin: 0 20px 0 0
 
-					a 
-						color: $branco
-						text-transform: uppercase
+			a 
+				display: inline-block
+				margin: 0 20px 0 0
+				color: $branco
+				text-transform: uppercase
+
 
 		.social
-			li 
+			 
+			a
+				color: $branco
 				display: inline-block
-				margin: 0 5px 0 0
-
-				a
-					color: $branco
-					display: block
-					border: 1px solid $branco
-					padding: 4px
-					width: 25px
-					height: 25px
-					line-height: 12px
-					text-align: center
-					+border-radius(120px)
+				margin: 0 10px 0 0
+				border: 1px solid $branco
+				padding: 4px
+				width: 25px
+				height: 25px
+				line-height: 12px
+				text-align: center
+				+border-radius(120px)
 
 	.logo,
 	.links
